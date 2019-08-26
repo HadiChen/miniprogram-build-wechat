@@ -1,0 +1,68 @@
+@import '../../../assets/css/border-box.wxss';
+@import '../../../assets/css/base.wxss';
+
+.shop-view {
+  width: 100%;
+  padding: 20rpx;
+}
+
+.shop-card {
+  float: left;
+  padding: 10rpx;
+}
+
+.shop-card__item {
+  background: #ffffff;
+  width: 216rpx;
+  box-shadow: 0 4rpx 26rpx 0 rgba(217, 217, 217, 0.3);
+  height: 324rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  padding: 0 16rpx;
+}
+
+.shop-card__image {
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 58rpx;
+  background: #F5F5F5;
+  overflow: hidden;
+  margin: 32rpx auto 16rpx;
+}
+.shop-card__image image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.shop-card__text {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #333333;
+}
+.shop-card__text--title {
+  font-size: 32rpx;
+  line-height: 38rpx;
+}
+.shop-card__text--subTitle {
+  font-size: 20rpx;
+  line-height: 28rpx;
+  margin-top: 6rpx;
+}
+.shop-card__content {
+  height: 54rpx;
+  width: 100%;
+  font-size: 18rpx;
+  color: #999999;
+  margin-top: 10rpx;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}

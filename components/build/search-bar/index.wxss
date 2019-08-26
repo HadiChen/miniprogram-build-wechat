@@ -1,0 +1,71 @@
+@import '../../../assets/css/border-box.wxss';
+@import '../../../assets/iconfont/iconfont.wxss';
+
+.searchbar-wrap {
+  width: 100%;
+  height: 100rpx;
+  position: relative;
+  background: #01A3C1;
+}
+
+.searchbar-wrap__cover {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.searchbar-wrap__main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar-main__input {
+  width: 620rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  padding: 0 32rpx;
+}
+
+.searchbar-main__sousuo {
+  color: #979797;
+  font-size: 30rpx;
+  margin-right: 16rpx;
+}
+
+.searchbar-main__placeholder {
+  font-size: 28rpx;
+  color: #CCCCCC;
+}
+
+.searchbar-chat {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  position: relative;
+  margin-left: 26rpx;
+}
+.searchbar-chat__cover {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.searchbar-chat__icon {
+  color: #fff;
+  font-size: 38rpx;
+}
+
+.searchbar-chat__sms {
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+}

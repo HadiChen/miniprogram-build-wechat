@@ -1,0 +1,9 @@
+.image-view {
+  width: 100%;
+}
+.image-view__flew {
+  display: flex
+}
+.image-view__image {
+  display: block;
+}

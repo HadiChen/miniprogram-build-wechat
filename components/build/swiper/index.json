@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "Images": "/components/build/images/index"
+  }
+}

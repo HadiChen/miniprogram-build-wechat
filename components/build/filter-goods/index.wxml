@@ -1,0 +1,80 @@
+<view style="{{style}}">
+  <!-- 筛选 -->
+  <view class="brand-tab">
+    <!-- 综合 -->
+    <view class="brand-tab__item justify-content" bindtap="compisiteSelect">
+      <view
+        class="brand-tab__span {{compisite ? 'is-select' : '' }}"
+        style="{{fontSize}}">
+        <text style="{{activeTextColor}}" wx:if="{{compisite}}">推荐</text>
+        <text style="{{textColor}}" wx:else>推荐</text>
+      </view>
+    </view>
+    <view class="brand-tab__item justify-content" bindtap="newSelect">
+      <view
+        class="brand-tab__span {{isNew ? 'is-select' : '' }}"
+        style="{{fontSize}}">
+        <text style="{{activeTextColor}}" wx:if="{{isNew}}">最新</text>
+        <text style="{{textColor}}" wx:else>最新</text>
+      </view>
+    </view>
+    <view class="brand-tab__item justify-content" bindtap="salesSelect">
+      <view
+        class="brand-tab__span {{sales !== '' ? 'is-select' : '' }}"
+        style="{{fontSize}}">
+        <text style="{{activeTextColor}}" wx:if="{{sales !== ''}}">销量</text>
+        <text style="{{textColor}}" wx:else>销量</text>
+      </view>
+      <view class="brand-tab__itemSpan flex-column">
+        <view class="brand-tab__itemButtom">
+          <view
+            class="iconfont icon-sanjiaoxing-up brand-tab__ico1 {{sales === 0 ? 'is-select' : '' }}"
+            style="{{sales === 0 ? activeTextColor : textColor}}"></view>
+        </view>
+        <view class="brand-tab__itemTop">
+          <view
+            class="iconfont icon-sanjiaoxing-up brand-tab__ico  {{sales === 1 ? 'is-select' : '' }}"
+            style="{{sales === 1 ? activeTextColor : textColor}}"></view>
+        </view>
+      </view>
+    </view>
+    <view class="brand-tab__item justify-content" style="position: relative;" bindtap="priceSelect">
+      <view class="br-line"></view>
+      <view
+        class="brand-tab__span {{price !== '' ? 'is-select' : '' }}"
+        style="{{fontSize}}">
+        <text style="{{activeTextColor}}" wx:if="{{price !== ''}}">价格</text>
+        <text style="{{textColor}}" wx:else>价格</text>
+      </view>
+      <view class="brand-tab__itemSpan flex-column">
+        <view class="brand-tab__itemButtom">
+          <view
+            class="iconfont icon-sanjiaoxing-up brand-tab__ico1 {{price === 0 ?'is-select':'' }}"
+            style="{{price === 0 ? activeTextColor : textColor}}"></view>
+        </view>
+        <view class="brand-tab__itemTop">
+          <view
+            class="iconfont icon-sanjiaoxing-up brand-tab__ico {{price === 1 ? 'is-select':'' }}"
+            style="{{price === 1 ? activeTextColor : textColor}}"></view>
+        </view>
+      </view>
+    </view>
+    <view class="brand-tab__item justify-content" bindtap="layoutSelect">
+      <view class="brand-tab__span">
+        <view
+          class="iconfont icon-erweima brand-tab__ico1 {{goodsData.row == 2 ? 'is-select' : '' }}"
+          style="{{goodsData.row == 2 ? activeTextColor : textColor}}"></view>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view scroll-y="{{true}}" style="{{scrollViewHeightStyle}}" bindscrolltolower="scrolltolower">
+    <GoodsList viewData="{{goodsData}}"/>
+    <NoData
+      loading="{{loading}}"
+      listLength="{{goodsData.list.length}}"
+      isEnd="{{isEnd}}"
+      noMore="{{true}}"
+      fullscreen="{{false}}"/>
+  </scroll-view>
+</view>

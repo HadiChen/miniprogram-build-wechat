@@ -1,0 +1,55 @@
+<template name="layout">
+  <Nav
+    wx:if="{{item.viewType === 1}}"
+    marginBottom="{{item.marginBottom}}"
+    bgColor="{{item.contentBgColor}}"
+    viewData="{{item.data}}"/>
+  <BannerSwiper
+    wx:if="{{item.viewType === 2}}"
+    marginBottom="{{item.marginBottom}}"
+    bgColor="{{item.contentBgColor}}"
+    viewData="{{item.data}}"/>
+  <IconNav
+    wx:if="{{item.viewType === 3}}"
+    marginBottom="{{item.marginBottom}}"
+    bgColor="{{item.contentBgColor}}"
+    viewData="{{item.data}}"/>
+  <ShopCard
+    wx:if="{{item.viewType === 4}}"
+    marginBottom="{{item.marginBottom}}"
+    bgColor="{{item.contentBgColor}}"
+    viewData="{{item.data}}"/>
+  <GoodsList
+    wx:if="{{item.viewType === 5}}"
+    marginBottom="{{item.marginBottom}}"
+    bgColor="{{item.contentBgColor}}"
+    viewData="{{item.data}}"/>
+  <ClassifyGoods
+    wx:if="{{item.viewType === 6}}"
+    marginBottom="{{item.marginBottom}}"
+    bgColor="{{item.contentBgColor}}"
+    viewData="{{item.data}}"/>
+  <ShopHeard
+    wx:if="{{item.viewType === 7}}"
+    marginBottom="{{item.marginBottom}}"
+    bgColor="{{item.contentBgColor}}"
+    projectId="{{projectId}}"
+    viewData="{{item.data}}"/>
+  <FilterGoods
+    class="filter-goods-view"
+    wx:if="{{item.viewType === 8}}"
+    marginBottom="{{item.marginBottom}}"
+    projectId="{{projectId}}"
+    scrollViewHeight="{{scrollViewHeight}}"
+    viewData="{{item.data}}"
+    bgColor="{{item.contentBgColor}}"/>
+  <SearchBar
+    wx:if="{{item.viewType === 9}}"
+    marginBottom="{{item.marginBottom}}"
+    bgColor="{{item.contentBgColor}}"
+    viewData="{{item.data}}"/>
+</template>
+
+<block wx:for="{{viewData}}" wx:key="index">
+  <template is="layout" data="{{item, projectId, scrollViewHeight}}"/>
+</block>

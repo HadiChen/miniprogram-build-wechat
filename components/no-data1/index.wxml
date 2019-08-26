@@ -1,0 +1,17 @@
+<view style="margin-top: {{top}}px;" >
+	<view wx:if="{{isEnd && listLength && noMore}}" class="empty-list">
+		<image class="empty-list__img-more" src="../../assets/images/no-more.png" />
+	</view>
+
+	<view class="empty-list {{loading ? 'hide' : ''}}" wx:if="{{!listLength}}">
+		<image class="empty-list__img" src="{{imgPath}}" />
+		<view>{{imgDesc}}</view>
+	</view>
+
+	<!-- 加载中 -->
+	<view class="spinbox {{fullscreen ? 'spinbox-fiexd' : ''}}" wx:if="{{loading}}">
+		<view class="spin"></view>
+		加载中...
+	</view>
+</view>
+

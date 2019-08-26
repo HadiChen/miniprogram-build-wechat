@@ -1,0 +1,31 @@
+<view style="{{style}}">
+  <scroll-view
+    scroll-x="{{true}}"
+    class="shop-view">
+    <view style="width: {{236 * viewData.list.length}}rpx" class="clearfix">
+      <view class="shop-card"
+        wx:for="{{viewData.list}}"
+        wx:key="{{item.shopId}}"
+        data-id="{{item.shopId}}"
+        bind:tap="jump">
+        <view class="shop-card__item">
+          <view class="shop-card__image">
+            <image
+              src="{{item.logo}}?x-oss-process=image/resize,w_116"
+              wx:if="{{item.logo}}"
+              mode="aspectFill"/>
+          </view>
+          <view class="shop-card__text shop-card__text--title">
+            {{item.title}}
+          </view>
+          <view class="shop-card__text shop-card__text--subTitle">
+            {{item.subTitle}}
+          </view>
+          <view class="shop-card__content">
+            {{item.content}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "Nav": "/components/build/nav/index",
+    "ClassifyGoods": "/components/build/classify-goods/index",
+    "FilterGoods": "/components/build/filter-goods/index",
+    "GoodsList": "/components/build/goods-list/index",
+    "IconNav": "/components/build/icon-nav/index",
+    "SearchBar": "/components/build/search-bar/index",
+    "ShopCard": "/components/build/shop-card/index",
+    "ShopHeard": "/components/build/shop-heard/index",
+    "BannerSwiper": "/components/build/swiper/index"
+  }
+}

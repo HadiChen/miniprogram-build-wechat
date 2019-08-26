@@ -1,0 +1,29 @@
+@import '../../../assets/css/border-box.wxss';
+
+.classify-list {
+  background: #ffffff;
+  height: 100rpx;
+  line-height: 100rpx;
+  white-space: nowrap;
+  padding: 0 20rpx;
+}
+
+.classify-list__item {
+  display: inline-block;
+  border-radius: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  padding: 0 24rpx;
+  margin: 0 10rpx;
+  color: #757575;
+}
+
+.classify-list__item.active {
+  color: #ffffff;
+  background: #01A3C1;
+}
+
+.swiper-goods {
+  transition: all 0.3s;
+}

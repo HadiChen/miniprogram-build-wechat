@@ -1,0 +1,15 @@
+view,
+text,
+swiper,
+cover-view,
+cover-image,
+icon,
+label,
+input,
+picker,
+picker-view,
+textarea,
+button,
+scroll-view {
+  box-sizing: border-box;
+}

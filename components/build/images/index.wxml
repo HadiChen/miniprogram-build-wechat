@@ -1,0 +1,13 @@
+<view class="image-view {{imagesList.length > 1 ? 'image-view__flew' : ''}}" style="{{heightStyle}}">
+  <image
+    class="image-view__image"
+    src="{{item.cover}}{{osProcess}}"
+    data-url="{{item.cover}}"
+    wx:for="{{imagesList}}"
+    wx:key="index"
+    lazy-load="{{true}}"
+    mode="{{!height || height === 'auto' ? 'widthFix' : 'aspectFill'}}"
+    style="width: {{100 / imagesList.length}}%; {{heightStyle}}"
+    data-link="{{item.link}}"
+    bind:tap="jump"/>
+</view>

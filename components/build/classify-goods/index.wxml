@@ -1,0 +1,33 @@
+<view style="{{style}}">
+  <scroll-view
+    class="classify-list"
+    scroll-x="{{true}}"
+    scroll-with-animation="{{true}}"
+    scroll-into-view="classify-{{activeCategoryId}}">
+    <view
+      class="classify-list__item {{activeCategoryId === item.categoryId ? 'active' : ''}}"
+      wx:for="{{classifyList}}"
+      wx:key="{{item.categoryId}}"
+      id="classify-{{item.categoryId}}"
+      data-id="{{item.categoryId}}"
+      bind:tap="activeClassify"
+      style="background: {{ activeCategoryId === item.categoryId ? viewData.activeBgcolor : '' }}">
+      {{item.menuName}}
+    </view>
+  </scroll-view>
+
+  <swiper
+    style="height: {{heightData['goods' + activeCategoryId] || 0}}px; margin-top: 30rpx;"
+    current="{{current}}"
+    class="swiper-goods"
+    bindchange="swiperChange">
+    <swiper-item
+      wx:for="{{goodsList}}"
+      wx:key="{{item.categoryId}}">
+      <GoodsList
+        viewData="{{item}}"
+        bind:getRect="getRect"
+        id="goods{{item.categoryId}}"/>
+    </swiper-item>
+  </swiper>
+</view>

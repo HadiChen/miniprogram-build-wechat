@@ -1,0 +1,31 @@
+@import '../../../assets/css/border-box.wxss';
+
+.scroll-view {
+  width: 100%;
+  white-space: nowrap;
+}
+.scroll-view__item {
+  display: inline-block;
+  font-size: 28rpx;
+  padding:  10rpx 30rpx;
+  color: #ffffff;
+}
+.scroll-view__item--text {
+  padding: 10rpx 0;
+  position: relative;
+}
+
+.scroll-view__item--border {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4rpx;
+  background: #ffffff;
+  border-radius: 2rpx;
+  display: none;
+}
+
+.scroll-view__item--text--active .scroll-view__item--border {
+  display: block;
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "GoodsList": "/components/build/goods-list/index",
+    "NoData": "/components/no-data1/index"
+  }
+}

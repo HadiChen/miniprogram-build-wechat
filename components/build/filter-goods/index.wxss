@@ -1,0 +1,205 @@
+@import '../../../app.wxss';
+
+.br-line {
+  position: absolute;
+  right: 0;
+  top: 25%;
+  width: 2rpx;
+  height: 50%;
+  border: 1px solid #CCCCCC !important;
+}
+.brand-tab {
+  position: relative;
+  display: flex;
+  background: #fff;
+  border-bottom: 2rpx solid #E7E7EB;
+  margin-bottom: 20rpx;
+}
+
+.brand-tab__item {
+  flex: 1 1 auto;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+}
+
+.brand-tab__itemSpan {
+  display: flex;
+  flex-direction: columns;
+}
+
+.brand-tab__span {
+  color: #333333;
+  font-size: 28rpx;
+}
+
+.brand-tab__item .is-select {
+  color: #01A3C1;
+}
+
+.brand-tab__ico {
+  color: #CCCCCC;
+  font-size: 32rpx;
+}
+
+.brand-tab__ico1 {
+  color: #CCCCCC;
+  font-size: 32rpx;
+}
+
+.brand-tab__itemIco {
+  display: block;
+}
+
+.brand-tab__itemTop {
+  display: block;
+  height: 46rpx;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.brand-tab__ico2 {
+  display: inline-block;
+  color: #757575;
+  font-size: 38rpx;
+}
+
+.brand-tab__itemTop2 {
+  display: block;
+  height: 46rpx;
+  line-height: 46rpx;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.brand-tab__itemButtom {
+  display: block;
+  height: 46rpx;
+  margin-bottom: 4rpx;
+}
+
+.brand-lists {
+  padding-left: 30rpx;
+  background: #FFF;
+}
+
+.brand-item {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #F1F1F1;
+}
+
+.brand-item__image {
+  width: 240rpx;
+  height: 240rpx;
+  opacity: 0.8;
+  background: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-item__image image {
+  width: 100%;
+  height: 100%;
+}
+
+.brand-item__right {
+  display: flex;
+  width: 430rpx;
+  margin-left: 35rpx;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.brand-item__title {
+  font-family: TimesNewRomanPSMT;
+  font-size: 30rpx;
+  color: #22303D;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brand-item__sub {
+  margin-top: 3rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #22303D;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brand-item__label {
+  margin-top: 4rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #A2A2A6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-overflow {
+  display: inline-block;
+}
+
+.brand-item__price {
+  margin-top: 50rpx;
+  font-family: TimesNewRomanPSMT;
+  font-size: 36rpx;
+  color: #FF4200;
+  display: flex;
+  align-items: flex-end;
+}
+
+.brand-item__span {
+  font-family: STSongti-SC-Bold;
+  font-size: 20rpx;
+  padding-bottom: 8rpx;
+}
+
+.brand-item__span2 {
+  font-family: TimesNewRomanPSMT;
+  font-size: 24rpx;
+  padding-bottom: 4rpx;
+}
+
+.brand-item__bottom {
+  display: flex;
+  height: 54rpx;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: PingFangSC-Regular;
+  font-size: 22rpx;
+  color: #A2A2A6;
+}
+
+.brand-item__botLeft {
+  display: flex;
+}
+
+.brand-item__parise {
+  margin: 0 25rpx;
+}
+
+.brand-item__button {
+  width: 130rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  text-align: center;
+  border-radius: 26rpx;
+  border: 2rpx solid #FF6600;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #FF6600;
+}

@@ -1,0 +1,148 @@
+@import '../../../assets/css/border-box.wxss';
+
+.goods-cover {
+  display: block;
+  width: 100%;
+}
+
+.goods-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx 30rpx;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.goods-row__item {
+  margin-bottom: 16rpx;
+  box-shadow: 0 4rpx 26rpx 0 rgba(217, 217, 217, 0.3);
+  background: #ffffff;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  position: relative;
+  width: 100%;
+}
+
+.goods-row__item.goods-row__item--1 {
+  border-radius: 0rpx;
+  margin-bottom: 0rpx;
+  display: flex;
+  box-shadow: none;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #F1F1F1;
+  justify-content: space-between;
+}
+
+.goods-row__item.goods-row__item--1:last-child {
+  border-bottom: 0;
+}
+
+.goods-row__item.goods-row__item--1 .goods-item__cover {
+  width: 240rpx;
+  height: 240rpx;
+}
+
+.goods-row__item.goods-row__item--1 .goods-item__title, .goods-row__item.goods-row__item--1 .goods-item__price {
+  margin-top: 0;
+}
+
+.goods-row__item.goods-row__item--1 .goods-item__sibar {
+  width: 435rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.goods-row__item.goods-row__item--2 {
+  width: 336rpx;
+}
+
+.goods-row__item.goods-row__item--3 {
+  width: 222rpx;
+  margin: 0 4rpx;
+}
+
+.goods-row__item.goods-row__item--3 .goods-item__title, .goods-row__item.goods-row__item--3 .goods-item__keywords {
+  font-size: 24rpx;
+}
+
+.goods-row__item.goods-row__item--3 .goods-item__goodslabel {
+  font-size: 20rpx;
+}
+
+.goods-item__label {
+  position: absolute;
+  left: 0;
+  top: 26rpx;
+}
+
+.goods-item__info {
+  font-size: 22rpx;
+  color: #A2A2A6;
+  line-height: 54rpx;
+}
+
+.goods-item__info--left {
+  margin-right: 25rpx;
+}
+
+.goods-item__label--item {
+  height: 44rpx;
+  line-height: 44rpx;
+  color: #ffffff;
+  font-size: 20rpx;
+  padding: 0 12rpx;
+  background: #FFA366;
+  border-radius: 0 24rpx 24rpx 0;
+}
+.goods-item__cover {
+  width: 100%;
+  display: block;
+}
+.goods-row__item--2 .goods-item__cover {
+  height: 276rpx;
+}
+
+.goods-row__item--3 .goods-item__cover {
+  height: 162rpx;
+}
+
+.text-hidden {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.goods-item__title {
+  font-size: 32rpx;
+  color: #22303D;
+  margin-top: 34rpx;
+}
+
+.goods-item__keywords {
+  font-size: 28rpx;
+  color: #22303D;
+  margin-top: 8rpx;
+}
+
+.goods-item__goodslabel {
+  font-size: 24rpx;
+  color: #757575;
+  margin-top: 16rpx;
+}
+
+.goods-item__price {
+  font-size: 28rpx;
+  color: #FF6600;
+  margin-top: 16rpx;
+}
+
+.goods-item__price--b {
+  font-size: 36rpx;
+}
+
+.hidden {
+  overflow: hidden;
+}

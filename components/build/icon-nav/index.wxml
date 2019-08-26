@@ -1,0 +1,19 @@
+<view style="{{style}}" class="icon-nav">
+  <view
+    wx:for="{{list}}"
+    wx:key="index"
+    class="icon-row"
+    style="width: {{100 / list.length}}%"
+    data-link="{{item.link}}"
+    bind:tap="jump">
+    <view class="icon-image">
+      <image
+        src="{{item.cover}}?x-oss-process=image/resize,w_90"
+        mode="aspectFill"
+        class="icon-image__image"/>
+    </view>
+    <view class="icon-text">
+      {{item.title}}
+    </view>
+  </view>
+</view>

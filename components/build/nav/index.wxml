@@ -1,0 +1,39 @@
+<wxs module="util">
+  var url = function (url) {
+    if (typeof url === 'string') {
+      var _url = url.split('?')[0]
+      return _url.indexOf('/') === 0 ? _url.slice(1) : _url
+    }
+    return url
+  }
+  var getActive = function (check, val, index) {
+    if (typeof check === 'number') {
+      return check === index
+    }
+    return check === url(val)
+  }
+  module.exports = {
+    url: url,
+    getActive: getActive
+  }
+</wxs>
+
+<view style="{{style}}">
+  <scroll-view
+    scroll-x="{{true}}"
+    class="scroll-view">
+    <view
+      wx:for="{{viewData.list}}"
+      wx:key="index"
+      class="scroll-view__item">
+      <view
+        class="scroll-view__item--text {{util.getActive(route, item.link, index) ? 'scroll-view__item--text--active' : ''}}"
+        style="color: {{util.getActive(route, item.link, index) ? viewData.activeColor : viewData.textColor}}"
+        data-link="{{item.link}}"
+        bind:tap="jump">
+        {{item.content}}
+        <view class="scroll-view__item--border" style="background: {{viewData.activeColor}}"></view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

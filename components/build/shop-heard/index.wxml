@@ -1,0 +1,47 @@
+<view style="{{style}}" class="shop-header">
+  <!-- <image
+    src="{{viewData.bgCover ? viewData.bgCover + '?x-oss-process=image/resize,w_750' : '/assets/images/roles-header.jpg'}}"
+    mode="aspectFill"
+    class="shop-header__cover"/> -->
+  <image
+    wx:if="{{viewData.bgCover}}"
+    src="{{viewData.bgCover}}?x-oss-process=image/resize,w_750"
+    mode="aspectFill"
+    class="shop-header__cover"/>
+
+  <view class="shop-header__bot">
+    <!-- 中间 -->
+    <view class="shop-header__bot-left">
+      <image
+        class="shop-header__bot-left--img"
+        src="{{viewData.info.shopHomeLogo}}?x-oss-process=image/resize,w_100"
+        mode="aspectFill"/>
+    </view>
+    <view class="shop-header__bot-right">
+      <view class="shop-header__bot-content">
+        <view class="shop-header__bot-store">{{viewData.info.shopName}}</view>
+        <view class="shop-header__bot-label">
+          <view class="shop-header__bot-label--label1">旗舰店</view>
+          <view class="shop-header__bot-label--label2">{{followAmount}} 人关注</view>
+        </view>
+      </view>
+      <view 
+        wx:if="{{isFollowing}}"
+        class="shop-header__bot-content-att1"
+        data-iscancel="{{1}}">
+        已关注
+      </view>
+      <view
+        wx:else
+        class="shop-header__bot-content-att2"
+        data-iscancel="{{0}}">
+        + 关注
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{show}}" class="brand-follow">
+  <view class="iconfont guanzhu {{isFollowing ? 'icon-guanzhu1' : 'icon-quxiaoguanzhu'}}"></view>
+  <view class="brand-follow__text">{{isFollowing ? '关注成功' : '取消关注'}}</view>
+</view>

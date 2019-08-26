@@ -1,0 +1,15 @@
+<view style="{{style}}">
+  <swiper
+    class="swiper"
+    wx:if="{{viewData.template === 3}}"
+    indicator-dots="{{viewData.indicatorDots}}"
+    vertical="{{viewData.vertical}}"
+    style="{{heightStyle}}">
+    <swiper-item
+      wx:for="{{viewData.list}}"
+      wx:key="index">
+      <Images imagesList="{{[item]}}" class="swiper-image" height="100%"/>
+    </swiper-item>
+  </swiper>
+  <Images imagesList="{{viewData.list}}" wx:else height="{{viewData.height}}"/>
+</view>

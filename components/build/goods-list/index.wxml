@@ -1,0 +1,65 @@
+<view style="{{style}}" id="goods-wrap">
+  <image
+    wx:if="{{showCover && viewData.bgCover}}"
+    src="{{viewData.bgCover}}?x-oss-process=image/resize,w_750"
+    class="goods-cover"
+    mode="widthFix"
+    bind:tap="goCoverLink"/>
+
+  <view
+    class="goods-row {{ viewData.row < 3 ? 'space-between' : '' }}"
+    style="{{marginTop}}">
+    <view
+      class="goods-row__item goods-row__item--{{viewData.row}}"
+      wx:for="{{viewData.list}}"
+      wx:key="{{item.goodsId}}"
+      data-id="{{item.goodsId}}"
+      data-isshop="{{item.isShop}}"
+      bind:tap="jump">
+      <view class="goods-item__label" wx:if="{{viewData.showLeftTopMarker}}">
+        <view
+          class="goods-item__label--item"
+          wx:for="{{item.label}}"
+          wx:key="{{item}}"
+          wx:if="{{item}}">
+          {{item}}
+        </view>
+      </view>
+
+      <image
+        lazy-load="{{true}}"
+        class="goods-item__cover"
+        mode="aspectFill"
+        src="{{item.img}}{{osProcess}}"/>
+      <view class="goods-item__sibar">
+        <view class="hidden">
+          <view class="text-hidden goods-item__title">
+            {{item.brandName}} {{item.goodsNumber}}
+          </view>
+
+          <view class="text-hidden goods-item__keywords" wx:if="{{viewData.showKeyword}}">
+            {{item.keywords}}
+          </view>
+          <view class="text-hidden goods-item__goodslabel" wx:if="{{viewData.showGoodsLable}}">
+            {{item.goodsLabel[0] || ''}}
+          </view>
+        </view>
+
+        <view class="hidden">
+          <view class="text-hidden goods-item__price" wx:if="{{viewData.showUnitPrice}}">
+            <block wx:if="{{item.unitPrice != 0 && item.unitPrice != '0.00'}}">
+              ￥<text class="goods-item__price--b">{{item.unitPrice}}</text>/{{item.unit || 'kg'}}
+            </block>
+            <block wx:else>
+              <text class="goods-item__price--b">询价</text>
+            </block>
+          </view>
+
+          <view class="goods-item__info" wx:if="{{viewData.showGoodsInfo}}">
+            <text class="goods-item__info--left">{{item.salesCount || 0}}份订单</text>{{item.viewGoodCount || 0}}人浏览
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

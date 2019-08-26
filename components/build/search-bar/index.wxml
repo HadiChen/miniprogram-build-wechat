@@ -1,0 +1,22 @@
+<view style="{{style}}">
+  <view class="searchbar-wrap">
+    <image
+      src="{{viewData.bgCover}}?x-oss-process=image/resize,w_750"
+      wx:if="{{viewData.bgCover}}"
+      mode="aspectFill"
+      class="searchbar-wrap__cover"/>
+    <view class="searchbar-wrap__main">
+      <view class="searchbar-main__input" bind:tap="jumpSearch">
+        <text class="iconfont icon-sousuo searchbar-main__sousuo"></text>
+        <text class="searchbar-main__placeholder">{{viewData.placeholder || '请输入产品型号，支持模糊搜索'}}</text>
+      </view>
+      <view class="searchbar-chat" bind:tap="jumpMsgList" wx:if="{{viewData.showChatImage}}">
+        <image
+          src="{{viewData.chatImage}}?x-oss-process=image/resize,w_60"
+          wx:if="{{viewData.showChatImage && viewData.chatImage}}"
+          class="searchbar-chat__cover"/>
+        <text class="iconfont icon-zaixianzixun searchbar-chat__icon" wx:else></text>
+      </view>
+    </view>
+  </view>
+</view>
